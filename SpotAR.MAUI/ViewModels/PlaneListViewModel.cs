@@ -48,10 +48,12 @@ public partial class PlaneListViewModel : ViewModelBase
         _aircraftSubscription?.Dispose();
 
         Observable<List<Aircraft>>? planesObservable = Observable
-            .Timer(TimeSpan.FromSeconds(0), TimeSpan.FromMinutes(1))
-            .SelectAwait((unit, cancel) => new ValueTask<List<Aircraft>>(_aircraftService.GetAircraftNearMeAsync()));
+            .Timer(TimeSpan.FromSeconds(2), TimeSpan.FromMinutes(1))
+            .WithLatestFrom(_locationService.LocationChanged, (unit, location) => location)
+            .SelectAwait(async (location, cancel) => await _aircraftService.GetAircraftNearLocationAsync(location));
 
         _aircraftSubscription = planesObservable
+            .ObserveOnCurrentSynchronizationContext()
             .Subscribe(planes =>
             {
                 _aircraft.Clear();

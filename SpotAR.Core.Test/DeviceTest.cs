@@ -12,7 +12,7 @@ public class DeviceTest
     {
         BehaviorSubject<Quaternion> deviceOrientation = new BehaviorSubject<Quaternion>(Constants.CameraFaceDown);
         BehaviorSubject<GPSCoord> deviceLocation = new BehaviorSubject<GPSCoord>(new GPSCoord(0, 0, 0));
-        // Arrange
+
         var device = new Device(
             deviceOrientation,
             deviceLocation,
@@ -21,7 +21,6 @@ public class DeviceTest
 
         var filterFunc = device.GetIsInViewFilterFunc();
 
-        // Act
         var aircraftLocationUnderDevice = new GPSCoord(0, 0, -1);
         var aircraftLocationSouthOfDevice = new GPSCoord(-1, 0, 0);
 

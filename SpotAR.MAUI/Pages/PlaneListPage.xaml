@@ -14,20 +14,28 @@
                                     EventName="Disappearing"/>
     </ContentPage.Behaviors>
 
-    <ListView ItemsSource="{Binding PlanesView}">
-        <ListView.ItemTemplate>
+    <CollectionView ItemsSource="{Binding PlanesView}">
+        <CollectionView.ItemTemplate>
             <DataTemplate x:DataType="models:Aircraft">
-                <ViewCell>
-                    <HorizontalStackLayout Padding="10">
-                        <Label Text="{Binding Flight}"/>
-                        <Label Text="{Binding Latitude}"/>
-                        <Label Text="{Binding Longitude}"/>
-                        <Label Text="{Binding AltGeomFt}"/>
-                        <Label Text="{Binding AltBaroFt}"/>
+                <Grid Padding="10"
+                      RowSpacing="10"
+                      ColumnSpacing="10"
+                      RowDefinitions="Auto,Auto">
+                    <HorizontalStackLayout Spacing="5"
+                                           Grid.Row="0">
+                        <Label Text="{Binding Flight, StringFormat='Flight {0:F2}'}"/>
+                        <Label Text="{Binding Latitude, StringFormat='Lat {0:F2}'}"/>
+                        <Label Text="{Binding Longitude, StringFormat='Lon {0:F2}'}"/>
                     </HorizontalStackLayout>
-                </ViewCell>
+                    <HorizontalStackLayout Spacing="5"
+                                           Grid.Row="1">
+                        <Label Text="{Binding Altitude, StringFormat='Alt {0:F2} m'}"/>
+                        <Label Text="{Binding Distance, StringFormat='Dist {0:F2} km'}"/>
+                        <Label Text="{Binding RelativeBearing, Converter={x:Static local:BearingConverter.Instance}}"/>
+                    </HorizontalStackLayout>
+                </Grid>
             </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 
 </ContentPage>
