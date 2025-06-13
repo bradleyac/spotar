@@ -19,5 +19,5 @@ public class Aircraft
     public float? AltBaroFt { get; set; }
 
     [NotMapped]
-    public GPSCoord GPSLocation => new GPSCoord(Latitude, Longitude, AltGeomFt ?? AltBaroFt ?? 0);
+    public GPSCoord GPSLocation => new GPSCoord(Latitude, Longitude, (AltGeomFt ?? AltBaroFt ?? 0) * 0.3048f);
 }

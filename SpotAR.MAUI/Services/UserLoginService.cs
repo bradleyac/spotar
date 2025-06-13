@@ -22,7 +22,7 @@ public class UserLoginService(HttpClient httpClient, OAuthClient oauthClient, Lo
     {
         var result = await _oauthClient.LoginAsync();
 
-        var apiResponse = await _httpClient.PostAsync(".auth/login/google", JsonContent.Create(new { id_token = result.IdentityToken, access_troken = result.AccessToken }));
+        var apiResponse = await _httpClient.PostAsync(".auth/login/google", JsonContent.Create(new { id_token = result.IdentityToken, access_token = result.AccessToken }));
 
         if (apiResponse.IsSuccessStatusCode)
         {

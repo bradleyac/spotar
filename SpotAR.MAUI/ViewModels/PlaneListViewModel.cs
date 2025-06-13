@@ -54,14 +54,11 @@ public partial class PlaneListViewModel : ViewModelBase
         _aircraftSubscription = planesObservable
             .Subscribe(planes =>
             {
-                lock (PlanesView.SyncRoot)
-                {
-                    _aircraft.Clear();
+                _aircraft.Clear();
 
-                    if (planes is not null)
-                    {
-                        _aircraft.AddRange(planes);
-                    }
+                if (planes is not null)
+                {
+                    _aircraft.AddRange(planes);
                 }
             });
     }
