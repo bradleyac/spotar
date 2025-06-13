@@ -12,7 +12,9 @@ public class OrientationService(IOrientationSensor orientation)
         Observable.FromEventHandler<OrientationSensorChangedEventArgs>(
             handler => _orientation.ReadingChanged += handler,
             handler => _orientation.ReadingChanged -= handler
-        ).Select(args => args.Item2.Reading.Orientation);
+        ).Select(args => args.Item2.Reading.Orientation)
+        .ThrottleLast(TimeSpan.FromMilliseconds(100))
+        .ObserveOnCurrentSynchronizationContext();
 
     public void StartMonitoring()
     {
