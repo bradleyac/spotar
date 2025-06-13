@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotAR.MAUI", "SpotAR.MAUI.csproj", "{76C975FC-A72D-0830-BC66-F2C627039142}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpotAR.Core", "SpotAR.Core.csproj", "{3659DA75-314F-C4D8-73AA-CA22AD2FA608}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,15 +10,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76C975FC-A72D-0830-BC66-F2C627039142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76C975FC-A72D-0830-BC66-F2C627039142}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76C975FC-A72D-0830-BC66-F2C627039142}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76C975FC-A72D-0830-BC66-F2C627039142}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3659DA75-314F-C4D8-73AA-CA22AD2FA608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3659DA75-314F-C4D8-73AA-CA22AD2FA608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3659DA75-314F-C4D8-73AA-CA22AD2FA608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3659DA75-314F-C4D8-73AA-CA22AD2FA608}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B4733355-BF39-42FE-ABC0-A33D028787CD}
+		SolutionGuid = {4508ABD4-16BC-4488-A2CC-26C9A032FF8D}
 	EndGlobalSection
 EndGlobal

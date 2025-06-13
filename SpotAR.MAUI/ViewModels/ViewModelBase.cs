@@ -2,5 +2,4 @@ using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SpotAR.MAUI;
 
-[ObservableObject]
-public partial class ViewModelBase { }
+public partial class ViewModelBase : ObservableObject { }

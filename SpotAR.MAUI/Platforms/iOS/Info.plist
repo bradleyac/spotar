@@ -30,5 +30,18 @@
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>CFBundleIdentifier</key>
 	<string>com.spotar.maui.ios</string>
+	<key>CFBundleURLName</key>
+	<string>SpotAR</string>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>com.googleusercontent.apps.149561413303-di2eveqicta6tn5o5o1mb3t65h1oi6qp</string>
+	</array>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>In order to find nearby planes and calculate relative positions.</string>
+	<key>NSLocationTemporaryUsageDescriptionDictionary</key>
+	<dict>
+		<key>TemporaryFullAccuracyUsageDescription</key>
+		<string>In order to provide the most accurate readings of nearby planes.</string>
+	</dict>
 </dict>
 </plist>

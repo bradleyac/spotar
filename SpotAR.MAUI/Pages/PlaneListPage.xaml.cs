@@ -2,12 +2,11 @@ using SpotAR.MAUI.ViewModels;
 
 namespace SpotAR.MAUI.Pages;
 
-public partial class PlaneListPage : ContentView
+public partial class PlaneListPage : ContentPage
 {
 	public PlaneListPage()
 	{
-		var vm = MauiProgram.Services.GetRequiredService<PlaneListViewModel>();
-		BindingContext = vm;
+		BindingContext = MauiProgram.Services.GetRequiredService<PlaneListViewModel>();
 		InitializeComponent();
 	}
 }

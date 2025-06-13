@@ -1,1 +1,0 @@
-public record AuthSettings(string GoogleOAuthClientId);
