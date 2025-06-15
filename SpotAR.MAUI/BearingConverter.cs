@@ -27,7 +27,7 @@ public class BearingConverter : IValueConverter
             < 281 => "W",
             < 304 => "WNW",
             < 326 => "NW",
-            < 348 => "NNW",
+            < 349 => "NNW",
             _ => "N"
         },
         _ => "N/A"
